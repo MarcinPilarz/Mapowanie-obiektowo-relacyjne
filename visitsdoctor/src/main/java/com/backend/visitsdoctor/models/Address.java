@@ -1,10 +1,17 @@
 package com.backend.visitsdoctor.models;
 
+import java.util.Set; 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
+
 
 @Entity
 @Table(name = "address")
@@ -19,6 +26,15 @@ public class Address {
 	private String houseNumber;
 	private String postalCode;
 	private String type;
+	
+	
+	@ManyToOne
+    @JoinColumn(name = "address_type_id", nullable = false) 
+    private AddressType addressType;
+	
+	@ManyToMany(mappedBy = "addresses")
+    private Set<Patient> patients;
+
 	public long getId() {
 		return id;
 	}
@@ -54,6 +70,18 @@ public class Address {
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+	public AddressType getAddressType() {
+		return addressType;
+	}
+	public void setAddressType(AddressType addressType) {
+		this.addressType = addressType;
+	}
+	public Set<Patient> getPatients() {
+		return patients;
+	}
+	public void setPatients(Set<Patient> patients) {
+		this.patients = patients;
 	}
 	
 	
