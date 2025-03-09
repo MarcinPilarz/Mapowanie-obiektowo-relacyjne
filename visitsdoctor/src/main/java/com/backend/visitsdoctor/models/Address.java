@@ -9,6 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 
@@ -16,7 +17,10 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "address")
 public class Address {
-
+	
+	@OneToOne(mappedBy = "address")
+    private Institution institution;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
