@@ -1,4 +1,4 @@
-package com.backend.visitsdoctor;
+package com.backend.visitsdoctor.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

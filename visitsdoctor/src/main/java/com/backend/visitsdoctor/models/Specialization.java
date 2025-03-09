@@ -1,4 +1,4 @@
-package com.backend.visitsdoctor;
+package com.backend.visitsdoctor.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,16 +7,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "addressType")
-public class AddressType {
-
+@Table(name = "specialization")
+public class Specialization {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	private String symbol;
 	private String name;
-	
 	public long getId() {
 		return id;
 	}
