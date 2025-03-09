@@ -26,8 +26,9 @@ public class Doctor extends Person {
 	@OneToMany(mappedBy = "doctor")
 	private List<Specialization> specializations;
 
+	
 	@OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Visit> visits;
+    private List<Deadline> deadlines;
 
 	public String getNpwz() {
 		return npwz;
@@ -53,13 +54,15 @@ public class Doctor extends Person {
 		this.specializations = specializations;
 	}
 
-	public List<Visit> getVisits() {
-		return visits;
+	public List<Deadline> getDeadlines() {
+		return deadlines;
 	}
 
-	public void setVisits(List<Visit> visits) {
-		this.visits = visits;
+	public void setDeadlines(List<Deadline> deadlines) {
+		this.deadlines = deadlines;
 	}
+	
+	
 
 //	public Long getId() {
 //		return id;

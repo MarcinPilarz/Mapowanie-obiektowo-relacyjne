@@ -1,4 +1,4 @@
-package com.backend.visitsdoctor.models;
+	package com.backend.visitsdoctor.models;
 
 import java.sql.Date;
 
@@ -21,10 +21,11 @@ public class Visit {
 	@ManyToOne
 	@JoinColumn(name = "patient_id", nullable = false)
 	private Patient patient;
-
+	
 	@ManyToOne
-	@JoinColumn(name = "doctor_id", nullable = false)
-	private Doctor doctor;
+    @JoinColumn(name = "institution_id", nullable = false)
+    private Institution institution;
+
 
 	@Enumerated(EnumType.STRING)
 	private VisitStatus status;
@@ -47,13 +48,6 @@ public class Visit {
 		this.patient = patient;
 	}
 
-	public Doctor getDoctor() {
-		return doctor;
-	}
-
-	public void setDoctor(Doctor doctor) {
-		this.doctor = doctor;
-	}
 
 	public VisitStatus getStatus() {
 		return status;
@@ -71,4 +65,12 @@ public class Visit {
 		this.dateOfVisit = dateOfVisit;
 	}
 
+	public Institution getInstitution() {
+		return institution;
+	}
+
+	public void setInstitution(Institution institution) {
+		this.institution = institution;
+	}
+	
 }
