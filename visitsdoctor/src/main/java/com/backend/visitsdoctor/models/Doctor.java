@@ -2,6 +2,7 @@ package com.backend.visitsdoctor.models;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,6 +26,9 @@ public class Doctor extends Person {
 	@OneToMany(mappedBy = "doctor")
 	private List<Specialization> specializations;
 
+	@OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Visit> visits;
+
 	public String getNpwz() {
 		return npwz;
 	}
@@ -47,6 +51,14 @@ public class Doctor extends Person {
 
 	public void setSpecializations(List<Specialization> specializations) {
 		this.specializations = specializations;
+	}
+
+	public List<Visit> getVisits() {
+		return visits;
+	}
+
+	public void setVisits(List<Visit> visits) {
+		this.visits = visits;
 	}
 
 //	public Long getId() {
