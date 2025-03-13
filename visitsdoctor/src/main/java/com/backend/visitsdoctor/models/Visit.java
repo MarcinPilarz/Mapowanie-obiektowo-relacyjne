@@ -10,6 +10,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Visit {
@@ -26,6 +27,9 @@ public class Visit {
     @JoinColumn(name = "institution_id", nullable = false)
     private Institution institution;
 
+	@OneToOne
+	@JoinColumn(name = "deadline_id", nullable = false)
+	private Deadline deadline;
 
 	@Enumerated(EnumType.STRING)
 	private VisitStatus status;
@@ -72,5 +76,14 @@ public class Visit {
 	public void setInstitution(Institution institution) {
 		this.institution = institution;
 	}
+
+	public Deadline getDeadline() {
+		return deadline;
+	}
+
+	public void setDeadline(Deadline deadline) {
+		this.deadline = deadline;
+	}
+	
 	
 }
