@@ -1,78 +1,108 @@
 package com.backend.visitsdoctor.controllers;
 
+import com.backend.visitsdoctor.dtos.PaymentRequestDto;
 import com.backend.visitsdoctor.dtos.VisitRequestDto;
 import com.backend.visitsdoctor.models.*;
 import com.backend.visitsdoctor.repository.*;
-import com.backend.visitsdoctor.repository.DeadlineRepository;
-import com.backend.visitsdoctor.repository.InstitutionRepository;
-import com.backend.visitsdoctor.repository.PatientRepository;
-import com.backend.visitsdoctor.repository.VisitRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
-import java.sql.Date;
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/visits")
 public class VisitController {
 
-    @Autowired
-    private VisitRepository visitRepository;
+	@Autowired
+	private VisitRepository visitRepository;
 
-    @Autowired
-    private PatientRepository patientRepository;
+	@Autowired
+	private PatientRepository patientRepository;
 
-    @Autowired
-    private InstitutionRepository institutionRepository;
+	@Autowired
+	private InstitutionRepository institutionRepository;
 
-    @Autowired
-    private DoctorRepository doctorRepository;
-    
-    @Autowired
-    private DeadlineRepository deadlineRepository;
+	@Autowired
+	private DoctorRepository doctorRepository;
 
-    @PostMapping("/add")
-    public ResponseEntity<?> addVisit(@RequestBody VisitRequestDto visitDto) {
-        Optional<Patient> patientOpt = patientRepository.findById(visitDto.getPatientId());
-        Optional<Institution> institutionOpt = institutionRepository.findById(visitDto.getInstitutionId());
+	@Autowired
+	private DeadlineRepository deadlineRepository;
 
-        if (patientOpt.isEmpty() || institutionOpt.isEmpty()) {
-            return ResponseEntity.badRequest().body("Patient or Institution not found");
-        }
+	@PostMapping("/add")
+	public ResponseEntity<?> addVisit(@RequestBody VisitRequestDto visitDto) {
 
-        Patient patient = patientOpt.get();
-        Institution institution = institutionOpt.get();
+		Optional<Patient> patientOpt = patientRepository.findById(visitDto.getPatientId());
+		Optional<Institution> institutionOpt = institutionRepository.findById(visitDto.getInstitutionId());
 
-        // Pobieramy pierwszy dostępny termin (Deadline) dla danej daty
-        Optional<Deadline> availableDeadlineOpt = deadlineRepository.findFirstByDateOrderByIdAsc(visitDto.getDateOfVisit());
+		if (patientOpt.isEmpty() || institutionOpt.isEmpty()) {
+			return ResponseEntity.badRequest().body("Patient or Institution not found");
+		}
 
-        if (availableDeadlineOpt.isEmpty()) {
-            return ResponseEntity.badRequest().body("No available deadlines for this date.");
-        }
+		Optional<Deadline> availableDeadlineOpt = deadlineRepository
+				.findFirstByDateOrderByIdAsc(visitDto.getDateOfVisit());
 
-        Deadline selectedDeadline = availableDeadlineOpt.get();
+		if (availableDeadlineOpt.isEmpty()) {
+			return ResponseEntity.badRequest().body("No available deadlines for this date.");
+		}
 
-        //Pobieramy lekarza przypisanego do terminu
-        Doctor doctor = selectedDeadline.getDoctor();
-        if (doctor == null) {
-            return ResponseEntity.badRequest().body("No doctor assigned to the selected deadline.");
-        }
+		Deadline selectedDeadline = availableDeadlineOpt.get();
+		Doctor doctor = selectedDeadline.getDoctor();
+		if (doctor == null) {
+			return ResponseEntity.badRequest().body("No doctor assigned to the selected deadline.");
+		}
 
-        //Tworzymy wizytę (Visit) i przypisujemy lekarza przez Deadline
-        Visit visit = new Visit();
-        visit.setPatient(patient);
-        visit.setInstitution(institution);
-        visit.setDateOfVisit(visitDto.getDateOfVisit());
-        visit.setStatus(VisitStatus.SCHEDULED);
-        visit.setDeadline(selectedDeadline); 
+		// Utwórz wizytę
+		Visit visit = new Visit();
+		visit.setPatient(patientOpt.get());
+		visit.setInstitution(institutionOpt.get());
+		visit.setDateOfVisit(visitDto.getDateOfVisit());
+		visit.setStatus(VisitStatus.SCHEDULED);
+		visit.setDeadline(selectedDeadline);
 
-        visitRepository.save(visit);
+		visitRepository.save(visit);
 
-        return ResponseEntity.ok("Visit added successfully with doctor: " + doctor.getId());
-    }
+		RestTemplate restTemplate = new RestTemplate();
+		String dotNetUrl = "http://localhost:5109/api/platnosci";
+
+		PaymentRequestDto paymentDto = new PaymentRequestDto();
+		paymentDto.setVisitId(visit.getId());
+		paymentDto.setAmount(150.0);
+		paymentDto.setDescription("Wizyta nr " + visit.getId());
+
+		try {
+
+			ResponseEntity<String> paymentResponse = restTemplate.postForEntity(dotNetUrl, paymentDto, String.class);
+
+			if (paymentResponse.getStatusCode().is2xxSuccessful()) {
+
+				String createdPaymentId = paymentResponse.getBody();
+				System.out.println("Created payment in .NET, ID=" + createdPaymentId);
+			} else {
+				System.out.println("Payment creation in .NET failed: " + paymentResponse.getStatusCode());
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+
+		return ResponseEntity.ok("Visit added successfully with doctor: " + doctor.getId());
+	}
+
+	@PutMapping("/{visitId}/confirmPayment")
+	public ResponseEntity<?> confirmPayment(@PathVariable Long visitId) {
+		Optional<Visit> visitOpt = visitRepository.findById(visitId);
+		if (visitOpt.isEmpty()) {
+			return ResponseEntity.notFound().build();
+		}
+
+		Visit visit = visitOpt.get();
+
+		visit.setStatus(VisitStatus.PAID);
+		visitRepository.save(visit);
+
+		return ResponseEntity.ok("Visit " + visitId + " confirmed as PAID");
+	}
 }

@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "Insurance1.Controllers.PlatnosciController",
+    "Method": "CreatePayment",
+    "RelativePath": "api/Platnosci",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Insurance1.Dtos.PaymentRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Insurance1.Controllers.PlatnosciController",
+    "Method": "ConfirmPayment",
+    "RelativePath": "api/Platnosci/confirm/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

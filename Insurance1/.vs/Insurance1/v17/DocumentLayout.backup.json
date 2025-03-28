@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marci\\source\\repos\\Insurance1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|c:\\users\\marci\\source\\repos\\insurance1\\insurance1\\controllers\\platnoscicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|solutionrelative:insurance1\\controllers\\platnoscicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|c:\\users\\marci\\source\\repos\\insurance1\\insurance1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|solutionrelative:insurance1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|c:\\users\\marci\\source\\repos\\insurance1\\insurance1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|solutionrelative:insurance1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|c:\\users\\marci\\source\\repos\\insurance1\\insurance1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|solutionrelative:insurance1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|c:\\users\\marci\\source\\repos\\insurance1\\insurance1\\paymentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|solutionrelative:insurance1\\paymentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|c:\\users\\marci\\source\\repos\\insurance1\\insurance1\\platnosci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|solutionrelative:insurance1\\platnosci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|c:\\users\\marci\\source\\repos\\insurance1\\insurance1\\ubezpieczeniacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|solutionrelative:insurance1\\ubezpieczeniacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|c:\\users\\marci\\source\\repos\\insurance1\\insurance1\\statusyplatnosci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|solutionrelative:insurance1\\statusyplatnosci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|c:\\users\\marci\\source\\repos\\insurance1\\insurance1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3BFD27F-4095-4CE3-893E-83E280F8D760}|Insurance1\\Insurance1.csproj|solutionrelative:insurance1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlatnosciController.cs",
+              "DocumentMoniker": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\Controllers\\PlatnosciController.cs",
+              "RelativeDocumentMoniker": "Insurance1\\Controllers\\PlatnosciController.cs",
+              "ToolTip": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\Controllers\\PlatnosciController.cs",
+              "RelativeToolTip": "Insurance1\\Controllers\\PlatnosciController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAwCcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T12:59:57.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\appsettings.json",
+              "RelativeDocumentMoniker": "Insurance1\\appsettings.json",
+              "ToolTip": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\appsettings.json",
+              "RelativeToolTip": "Insurance1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-15T12:41:52.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\Program.cs",
+              "RelativeDocumentMoniker": "Insurance1\\Program.cs",
+              "ToolTip": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\Program.cs",
+              "RelativeToolTip": "Insurance1\\Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwB4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T10:03:32.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PaymentRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\PaymentRequestDto.cs",
+              "RelativeDocumentMoniker": "Insurance1\\PaymentRequestDto.cs",
+              "ToolTip": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\PaymentRequestDto.cs",
+              "RelativeToolTip": "Insurance1\\PaymentRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T13:13:40.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Insurance1\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Insurance1\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-15T10:50:11.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UbezpieczeniaContext.cs",
+              "DocumentMoniker": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\UbezpieczeniaContext.cs",
+              "RelativeDocumentMoniker": "Insurance1\\UbezpieczeniaContext.cs",
+              "ToolTip": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\UbezpieczeniaContext.cs",
+              "RelativeToolTip": "Insurance1\\UbezpieczeniaContext.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T10:10:39.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Platnosci.cs",
+              "DocumentMoniker": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\Platnosci.cs",
+              "RelativeDocumentMoniker": "Insurance1\\Platnosci.cs",
+              "ToolTip": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\Platnosci.cs",
+              "RelativeToolTip": "Insurance1\\Platnosci.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAcwA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T10:35:40.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StatusyPlatnosci.cs",
+              "DocumentMoniker": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\StatusyPlatnosci.cs",
+              "RelativeDocumentMoniker": "Insurance1\\StatusyPlatnosci.cs",
+              "ToolTip": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\StatusyPlatnosci.cs",
+              "RelativeToolTip": "Insurance1\\StatusyPlatnosci.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAmwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T12:45:14.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Insurance1\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\marci\\source\\repos\\Insurance1\\Insurance1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Insurance1\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T10:26:45.411Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
